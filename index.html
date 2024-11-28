@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Bangun Segitiga</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="tengah">
+  <div class="card">
+  <h1 id="txBARU">RUANG BANGUN SEGITIGA</h1>
+  <div class="cardbody">
+   <form>
+    <label> Nilai Alas  </label>
+      <input type="text" name="txALAS" id="txALAS">
+    <label> Nilai Tinggi  </label>
+     <input type="text" name="txTINGGI" id="txTINGGI">
+    <label> Nilai Sisi 1  </label>
+     <input type="text" name="txSISI1" id="txSISI1">
+    <label> Nilai Sisi 2  </label>
+     <input type="text" name="txSISI2" id="txSISI2">
+    <label> Nilai Sisi 3  </label>
+     <input type="text" name="txSISI3" id="txSISI3">
+   </form>
+   <div id="txHASIL"> Nilai Luas & Keliling :</div>
+  </div>
+  <div class="cardfooter">
+  <button onclick="pesan()"> PROSES DISINI</button>
+  </style>
+  </div>
+  </div>
+</div>
+  
+<script>
+  function pesan(){
+  //alert("Belajar JavaScript")
+  let ALAS = document.getElementById("txALAS").value
+  let TING = document.getElementById("txTINGGI").value
+  let S1 = document.getElementById("txSISI1").value
+  let S2 = document.getElementById("txSISI2").value
+  let S3 = document.getElementById("txSISI3").value
+ 
+//Proses Hitung Luas
+  let LUAS =0.5*ALAS*TING
+  let KEL = Number(S1) + Number(S2) + Number(S3)
+  
+  let hsl = "Hitung luas segitiga <br> Luas = 1/2 x Alas x Tinggi<br>";
+    hsl += "Luas = 1/2 x " + ALAS + "cm x " + TING + "cm<br>";
+    hsl += "Luas = " + LUAS + "cm<sup>2</sup><br><br>";
+    hsl += "Hitung Keliling Segitiga<br>";
+    hsl += "Keliling = Sisi1 + Sisi2 + Sisi3<br>";
+    hsl += "Keliling = " + S1 + "cm + " + S2 + "cm + " + S3 + "cm<br>";
+    hsl += "Keliling = " + KEL + " cm";
+    document.getElementById("txHASIL").innerHTML = hsl;
+  }
+</script>
+</body>
+</html>
